@@ -1,0 +1,18 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: attribution-database-api
+  labels:
+    name: attribution-database-api
+  annotations:
+    kubernetesReverseproxy: >
+      {"hosts":
+        [
+          {"host": "attribution-database-api.prod.chefkoch.de", "port": 80}
+        ]
+      }
+spec:
+  ports:
+    - {name: http, port: 80}
+  selector:
+    name: attribution-database-api

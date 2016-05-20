@@ -3,3 +3,6 @@
 .settings/
 phpunit.phar
 tests/config.php
+/.idea
+/kubernetes/**/config
+/kubernetes/**/secret*
